@@ -1,0 +1,238 @@
+{
+  "dataset": {
+    "nome": "voos.csv",
+    "tipo": "Grafo dirigido e ponderado",
+    "vertices": 90,
+    "arestas": 842,
+    "pares_unicos": 166,
+    "fontes_bfs_dfs": [
+      "EWR",
+      "JFK",
+      "LGA"
+    ]
+  },
+  "bfs_dfs": {
+    "EWR": {
+      "bfs_ordem_15": [
+        "EWR",
+        "IAH",
+        "ORD",
+        "FLL",
+        "SFO",
+        "LAS",
+        "PBI",
+        "MIA",
+        "ATL",
+        "PHX",
+        "MSP",
+        "LAX",
+        "CLT",
+        "IAD",
+        "SNA"
+      ],
+      "bfs_camadas": 1,
+      "bfs_ciclos": [
+        "EWR",
+        "IAH",
+        "ORD",
+        "FLL",
+        "SFO"
+      ],
+      "bfs_tempo_s": 5.3e-05,
+      "dfs_ordem_15": [
+        "EWR",
+        "RDU",
+        "MCI",
+        "BTV",
+        "DCA",
+        "BDL",
+        "PWM",
+        "BUF",
+        "MIA",
+        "BWI",
+        "FLL",
+        "MCO",
+        "DSM",
+        "PVD",
+        "RIC"
+      ],
+      "dfs_ciclos": [],
+      "dfs_tempo_s": 8.5e-05
+    },
+    "JFK": {
+      "bfs_ordem_15": [
+        "JFK",
+        "MIA",
+        "BQN",
+        "MCO",
+        "PBI",
+        "TPA",
+        "LAX",
+        "BOS",
+        "ATL",
+        "SFO",
+        "RSW",
+        "SJU",
+        "PHX",
+        "BUF",
+        "LAS"
+      ],
+      "bfs_camadas": 1,
+      "bfs_ciclos": [
+        "JFK",
+        "MIA",
+        "BQN",
+        "MCO",
+        "PBI"
+      ],
+      "bfs_tempo_s": 3.6e-05,
+      "dfs_ordem_15": [
+        "JFK",
+        "FLL",
+        "BQN",
+        "SJU",
+        "PSE",
+        "SYR",
+        "LAS",
+        "BUF",
+        "BTV",
+        "ROC",
+        "BOS",
+        "PWM",
+        "TPA",
+        "RDU",
+        "PBI"
+      ],
+      "dfs_ciclos": [],
+      "dfs_tempo_s": 6.8e-05
+    },
+    "LGA": {
+      "bfs_ordem_15": [
+        "LGA",
+        "IAH",
+        "ATL",
+        "IAD",
+        "ORD",
+        "DFW",
+        "FLL",
+        "MSP",
+        "DTW",
+        "MIA",
+        "BWI",
+        "MCO",
+        "DEN",
+        "PBI",
+        "XNA"
+      ],
+      "bfs_camadas": 1,
+      "bfs_ciclos": [
+        "LGA",
+        "IAH",
+        "ATL",
+        "IAD",
+        "ORD"
+      ],
+      "bfs_tempo_s": 2.5e-05,
+      "dfs_ordem_15": [
+        "LGA",
+        "MIA",
+        "DFW",
+        "BNA",
+        "FLL",
+        "ATL",
+        "CLT",
+        "MDW",
+        "RDU",
+        "MCO",
+        "DTW",
+        "ORD",
+        "CAK",
+        "CMH",
+        "MSP"
+      ],
+      "dfs_ciclos": [],
+      "dfs_tempo_s": 5.6e-05
+    }
+  },
+  "dijkstra": [
+    {
+      "origem": "EWR",
+      "destino": "LAX",
+      "custo": 2454.0,
+      "caminho": [
+        "EWR",
+        "LAX"
+      ],
+      "tempo_s": 0.000226
+    },
+    {
+      "origem": "EWR",
+      "destino": "SFO",
+      "custo": 2565.0,
+      "caminho": [
+        "EWR",
+        "SFO"
+      ],
+      "tempo_s": 0.000189
+    },
+    {
+      "origem": "JFK",
+      "destino": "MIA",
+      "custo": 1089.0,
+      "caminho": [
+        "JFK",
+        "MIA"
+      ],
+      "tempo_s": 0.000147
+    },
+    {
+      "origem": "JFK",
+      "destino": "LAX",
+      "custo": 2475.0,
+      "caminho": [
+        "JFK",
+        "LAX"
+      ],
+      "tempo_s": 0.000155
+    },
+    {
+      "origem": "LGA",
+      "destino": "ATL",
+      "custo": 762.0,
+      "caminho": [
+        "LGA",
+        "ATL"
+      ],
+      "tempo_s": 0.000139
+    }
+  ],
+  "bellman_ford": {
+    "caso_sem_ciclo_negativo": {
+      "distancias": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "ciclo_negativo": false,
+      "tempo_s": 1e-05
+    },
+    "caso_com_ciclo_negativo": {
+      "distancias": {
+        "P": -12,
+        "Q": -8,
+        "R": -10
+      },
+      "ciclo_negativo": true,
+      "tempo_s": 6e-06
+    }
+  },
+  "visualizations": [
+    {
+      "type": "degree_distribution",
+      "file": "grau_distribuicao.png",
+      "description": "Distribuição de graus totais (in+out) dos aeroportos"
+    }
+  ],
+  "discussion": "BFS e DFS são adequados para exploração topológica em grafos não ponderados, mas no dataset de voos alcançam apenas uma camada devido ao modelo de saídas diretas. Dijkstra mostrou-se eficiente para cálculo de rotas mínimas com pesos não negativos (distância em milhas). Bellman–Ford foi validado em grafos sintéticos, cobrindo tanto cenário com pesos negativos sem ciclo quanto com ciclo negativo detectado. Limitação: uso apenas da menor distância por par origem-destino."
+}

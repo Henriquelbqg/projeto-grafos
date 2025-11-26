@@ -1,0 +1,64 @@
+BFS / DFS (fontes: EWR, JFK, LGA)
+--------------------------------
+
+Fonte: EWR
+BFS ordem (primeiros 15 nós): ['EWR', 'TPA', 'GSO', 'FLL', 'RSW', 'MDW', 'MCI', 'PDX', 'TUL', 'HOU', 'DCA', 'SFO', 'PIT', 'GSP', 'SNA']
+BFS camadas alcançadas: 1
+BFS ciclos detectados (até 5): []
+DFS ordem (primeiros 15 nós): ['EWR', 'TPA', 'GSO', 'FLL', 'RSW', 'MDW', 'MCI', 'PDX', 'TUL', 'HOU', 'DCA', 'SFO', 'PIT', 'GSP', 'SNA']
+DFS ciclos detectados (até 5): []
+
+Fonte: JFK
+BFS ordem (primeiros 15 nós): ['JFK', 'TPA', 'LGB', 'RSW', 'FLL', 'PDX', 'HOU', 'DCA', 'SFO', 'PIT', 'SJU', 'ORF', 'BOS', 'IAD', 'IND']
+BFS camadas alcançadas: 1
+BFS ciclos detectados (até 5): []
+DFS ordem (primeiros 15 nós): ['JFK', 'TPA', 'LGB', 'RSW', 'FLL', 'PDX', 'HOU', 'DCA', 'SFO', 'PIT', 'SJU', 'ORF', 'BOS', 'IAD', 'IND']
+DFS ciclos detectados (até 5): []
+
+Fonte: LGA
+BFS ordem (primeiros 15 nós): ['LGA', 'TPA', 'FLL', 'RSW', 'MDW', 'MCI', 'DCA', 'PIT', 'BOS', 'IAD', 'ATL', 'MKE', 'MIA', 'DTW', 'BNA']
+BFS camadas alcançadas: 1
+BFS ciclos detectados (até 5): []
+DFS ordem (primeiros 15 nós): ['LGA', 'TPA', 'FLL', 'RSW', 'MDW', 'MCI', 'DCA', 'PIT', 'BOS', 'IAD', 'ATL', 'MKE', 'MIA', 'DTW', 'BNA']
+DFS ciclos detectados (até 5): []
+
+Dijkstra (distância mínima, pesos >= 0)
+---------------------------------------
+EWR -> LAX: 2454.0 milhas | caminho: ['EWR', 'LAX']
+EWR -> SFO: 2565.0 milhas | caminho: ['EWR', 'SFO']
+JFK -> MIA: 1089.0 milhas | caminho: ['JFK', 'MIA']
+JFK -> LAX: 2475.0 milhas | caminho: ['JFK', 'LAX']
+LGA -> ATL: 762.0 milhas | caminho: ['LGA', 'ATL']
+
+Bellman-Ford (casos com pesos negativos)
+---------------------------------------
+Caso 1 (sem ciclo negativo):
+  distâncias: {'A': 0.0, 'B': 4.0, 'C': 2.0, 'D': 5.0}
+  ciclo negativo detectado? False
+Caso 2 (com ciclo negativo):
+  distâncias: {'P': -6.0, 'Q': -2.0, 'R': -4.0}
+  ciclo negativo detectado? True
+
+Métricas de desempenho (tempo em s / memória em KB)
+-----------------------------------------------------
+BFS_EWR: t=0.000105s | mem=5.609KB
+DFS_EWR: t=0.000237s | mem=3.305KB
+BFS_JFK: t=6.7e-05s | mem=5.281KB
+DFS_JFK: t=0.000187s | mem=3.305KB
+BFS_LGA: t=4.6e-05s | mem=4.188KB
+DFS_LGA: t=0.000115s | mem=1.992KB
+Dijkstra_EWR_LAX: t=0.000656s | mem=10.68KB
+Dijkstra_EWR_SFO: t=0.000209s | mem=4.195KB
+Dijkstra_JFK_MIA: t=0.000129s | mem=4.195KB
+Dijkstra_JFK_LAX: t=0.000151s | mem=4.195KB
+Dijkstra_LGA_ATL: t=6.9e-05s | mem=2.148KB
+BellmanFord_sem_ciclo: t=1.6e-05s | mem=0.133KB
+BellmanFord_com_ciclo: t=9e-06s | mem=0.086KB
+
+Discussão crítica
+-----------------
+BFS/DFS são ideais para descobrir alcance/topologia em grafos não ponderados; no dataset, como todos os voos partem de NYC, alcançam apenas uma camada e não revelam ciclos.
+Dijkstra aproveita os pesos não negativos (distância mínima) e retorna rotas diretas; seria ainda mais útil se modelássemos múltiplos saltos ou custos diferentes (tempo/atraso).
+Bellman–Ford cobre cenários com pesos negativos; aqui usei exemplos sintéticos porque o dataset não possui distâncias negativas. Ele detecta ciclos negativos, algo que Dijkstra não faz.
+Limitações: usei distância como peso e mantive apenas o menor valor por par origem-destino, ignorando frequência, atrasos e horários. Isso simplifica o grafo mas descarta rotas alternativas e dinâmicas temporais.
+Visualização gerada: distribuição de graus totais em grau_distribuicao.png, útil para identificar hubs.

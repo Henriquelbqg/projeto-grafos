@@ -1,0 +1,9 @@
+pandas
+matplotlib
+plotly
+pyvis
+streamlit
+dataclasses
+typing
+networkx
+streamlit
