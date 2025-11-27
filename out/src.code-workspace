@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"name": "src",
+			"path": "../../../definitivo_grafos/src"
+		},
+		{
+			"name": "projeto-grafos",
+			"path": ".."
+		},
+		{
+			"name": "data",
+			"path": "../../../definitivo_grafos/data"
+		},
+		{
+			"name": "out",
+			"path": "../../../definitivo_grafos/out"
+		},
+		{
+			"name": "tests",
+			"path": "../../../definitivo_grafos/tests"
+		}
+	],
+	"settings": {}
+}
