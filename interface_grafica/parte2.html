@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parte 2 · Dataset de Voos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="glass">
+      <div class="logo">Parte 2 · Dataset de Voos</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#algoritmos">Algoritmos</a>
+        <a href="#visualizacoes">Visualizações</a>
+        <a href="#execucao">Execução</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="glass hero-text">
+          <p class="tagline">Comparação de algoritmos em rede real de voos</p>
+          <h1>BFS · DFS · Dijkstra · Bellman-Ford</h1>
+          <p class="lede">
+            Dataset dirigido e ponderado (90 aeroportos · 842 rotas). Rodamos as quatro
+            estratégias, medindo tempo, memória e qualidade dos caminhos.
+          </p>
+          <div class="cta-group" style="margin-top: 28px">
+            <a class="btn btn-primary" href="../parte2/out/grau_distribuicao.png" target="_blank">
+              Ver distribuição de graus
+            </a>
+            <a class="btn btn-secondary" href="../parte2/out/top_hubs_grau.png" target="_blank">
+              Ver top hubs
+            </a>
+          </div>
+        </div>
+
+        <div class="glass hero-visual">
+          <div>
+            <p class="section-title">KPIs do dataset</p>
+            <div class="hero-metrics" style="margin-top: 0">
+              <div class="metric-card">
+                <span>Vértices</span>
+                <strong>90</strong>
+              </div>
+              <div class="metric-card">
+                <span>Arestas</span>
+                <strong>842</strong>
+              </div>
+              <div class="metric-card">
+                <span>Pares únicos</span>
+                <strong>166</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="algoritmos" class="grid-two">
+        <article class="glass">
+          <p class="section-title">Fluxo analítico</p>
+          <h3>Execução automatizada</h3>
+          <ul class="card-list">
+            <li>BFS/DFS a partir de EWR, JFK e LGA</li>
+            <li>Dijkstra em 5 pares de aeroportos</li>
+            <li>Bellman-Ford com e sem ciclo negativo</li>
+            <li>Métricas de tempo e memória por tarefa</li>
+          </ul>
+        </article>
+
+        <article class="glass">
+          <p class="section-title">Casos em destaque</p>
+          <h3>Dijkstra e Bellman-Ford</h3>
+          <ul class="card-list">
+            <li>EWR → LAX, EWR → SFO, JFK → MIA, JFK → LAX, LGA → ATL</li>
+            <li>Bellman-Ford com pesos negativos controlados</li>
+            <li>Detecção de ciclo negativo em grafo sintético</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="visualizacoes" class="cta-grid">
+        <article class="glass cta-card">
+          <h3>Dashboard visual</h3>
+          <p> Cinco gráficos de apoio para storytelling dos resultados. </p>
+          <ul class="card-list">
+            <li><code>grau_distribuicao.png</code></li>
+            <li><code>top_hubs_grau.png</code></li>
+            <li><code>histograma_distancias.png</code></li>
+            <li><code>grau_in_out_scatter.png</code></li>
+            <li><code>top_rotas_distantes.png</code></li>
+          </ul>
+        </article>
+
+        <article class="glass cta-card">
+          <h3>Top rotas e dispersões</h3>
+          <p>
+            Use as visualizações focadas para apresentar os resultados mais relevantes dos algoritmos.
+          </p>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="../parte2/out/top_rotas_distantes.png" target="_blank">
+              Rotas mais longas
+            </a>
+            <a class="btn btn-secondary" href="../parte2/out/grau_in_out_scatter.png" target="_blank">
+              Dispersão grau in/out
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section id="execucao" class="glass">
+        <p class="section-title">Execução guiada</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span>01</span>
+            <p><code>cd parte2</code></p>
+          </div>
+          <div class="timeline-item">
+            <span>02</span>
+            <p><code>python3 -m src.cli --out ./out/</code></p>
+          </div>
+          <div class="timeline-item">
+            <span>03</span>
+            <p><code>pytest tests/</code> — garante corretude de BFS/DFS/Dijkstra/BF.</p>
+          </div>
+          <div class="timeline-item">
+            <span>04</span>
+            <p>
+              Abra os PNGs em <code>parte2/out/</code> para apresentar os dashboards visuais.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Parte 2 · Dataset de Voos · Comparação completa de algoritmos clássicos.
+    </footer>
+  </body>
+</html>
+

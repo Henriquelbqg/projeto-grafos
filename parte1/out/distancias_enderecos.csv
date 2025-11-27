@@ -1,0 +1,6 @@
+﻿X,Y,bairro_X,bairro_Y,custo,caminho
+Rua Nova Descoberta 500,Rua Baltazar Passos 50,Nova Descoberta,Boa Viagem,9.0,Nova Descoberta -> Alto Do Mandu -> Apipucos -> Iputinga -> Curado -> San Martin -> Afogados -> Imbiribeira -> Boa Viagem
+Avenida Marechal Mascarenhas de Moraes 2314,Avenida Caxangá 3000,Imbiribeira,Caxangá,6.0,Imbiribeira -> Afogados -> San Martin -> Curado -> Iputinga -> Caxangá
+Rua Real da Torre 1300,Av. Professor Luiz Freire 4200,Madalena,Curado,4.0,Madalena -> Prado -> Afogados -> San Martin -> Curado
+Rua do Futuro 900,Rua Conselheiro Rosa e Silva 1020,Graças,Casa Forte,3.0,Graças -> Jaqueira -> Santana -> Casa Forte
+Av. Norte Miguel Arraes de Alencar 5000,Rua Visconde de Livramento 150,Espinheiro,Paissandu,3.0,Espinheiro -> Graças -> Derby -> Paissandu

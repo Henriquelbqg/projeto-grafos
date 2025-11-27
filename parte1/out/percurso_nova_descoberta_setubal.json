@@ -1,0 +1,16 @@
+{
+    "origem": "Nova Descoberta",
+    "destino": "Boa Viagem",
+    "custo": 9.0,
+    "caminho": [
+        "Nova Descoberta",
+        "Alto Do Mandu",
+        "Apipucos",
+        "Iputinga",
+        "Curado",
+        "San Martin",
+        "Afogados",
+        "Imbiribeira",
+        "Boa Viagem"
+    ]
+}

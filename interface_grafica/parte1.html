@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parte 1 · Grafos do Recife</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="glass">
+      <div class="logo">Parte 1 · Grafos do Recife</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#metricas">Métricas</a>
+        <a href="#visualizacoes">Visualizações</a>
+        <a href="#execucao">Execução</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="glass hero-text">
+          <p class="tagline">Mapa vivo da capital pernambucana</p>
+          <h1>Grafo completo dos bairros do Recife</h1>
+          <p class="lede">
+            Normalizamos todos os bairros, construímos adjacências reais e aplicamos
+            métricas para entender densidades, graus e percursos críticos.
+          </p>
+          <div class="cta-group" style="margin-top: 28px">
+            <a class="btn btn-primary" href="../parte1/out/grafo_interativo.html" target="_blank">
+              Abrir grafo interativo
+            </a>
+            <a class="btn btn-secondary" href="../parte1/out/arvore_percurso.html" target="_blank">
+              Ver árvore do percurso
+            </a>
+          </div>
+        </div>
+
+        <div class="glass hero-visual">
+          <div>
+            <p class="section-title">Destaques</p>
+            <ul class="card-list">
+              <li>Métricas globais (ordem, tamanho, densidade)</li>
+              <li>Ego-subredes com grau, tamanho e densidade</li>
+              <li>Regra de pesos: rua, ponte, avenida, rodovia, estrada</li>
+              <li>Árvore do percurso “Nova Descoberta → Boa Viagem (Setúbal)”</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="metricas" class="glass grid-two">
+        <div>
+          <p class="section-title">Visualizações principais</p>
+          <h3>Recife em mapas e árvores</h3>
+          <ul class="card-list">
+            <li><code>out/arvore_percurso.html</code> / <code>.png</code></li>
+            <li><code>out/arvore_bfs_boa_vista.html</code> / <code>.png</code></li>
+            <li><code>out/grafo_interativo.html</code></li>
+          </ul>
+        </div>
+        <div>
+          <p class="section-title">Insights visuais</p>
+          <h3>Distribuições e rankings</h3>
+          <ul class="card-list">
+            <li><code>out/distribuicao_graus.png</code></li>
+            <li><code>out/top10_grau.png</code></li>
+            <li><code>out/densidade_ego_microrregiao.png</code></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="visualizacoes" class="cta-grid">
+        <article class="glass cta-card">
+          <h3>Visualizações analíticas</h3>
+          <p>Mapas de calor e rankings que contam a história da conectividade.</p>
+          <ul class="card-list">
+            <li><code>distribuicao_graus.png</code></li>
+            <li><code>top10_grau.png</code></li>
+            <li><code>densidade_ego_microrregiao.png</code></li>
+          </ul>
+        </article>
+
+        <article class="glass cta-card">
+          <h3>Grafo interativo</h3>
+          <p>
+            Implementado em PyVis com tooltips avançados, busca customizada e destaque de
+            caminhos.
+          </p>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="../parte1/out/grafo_interativo.html" target="_blank">
+              Abrir grafo
+            </a>
+            <a class="btn btn-secondary" href="../parte1/out/arvore_bfs_boa_vista.html" target="_blank">
+              Ver árvore BFS
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section class="glass outputs-section">
+        <p class="section-title">Saídas do diretório <code>parte1/out/</code></p>
+        <h3>Tudo o que já foi gerado para a Parte 1</h3>
+        <div class="outputs-grid">
+          <article class="output-card">
+            <h4>Árvore do percurso</h4>
+            <p>Versão interativa destacando o caminho obrigatório.</p>
+            <a class="btn btn-secondary" target="_blank" href="../parte1/out/arvore_percurso.html">Abrir HTML</a>
+          </article>
+          <article class="output-card">
+            <h4>Árvore do percurso (PNG)</h4>
+            <p>Exportação estática pronta para slides.</p>
+            <a class="btn btn-secondary" target="_blank" href="../parte1/out/arvore_percurso.png">Abrir PNG</a>
+          </article>
+          <article class="output-card">
+            <h4>Árvore BFS Boa Vista</h4>
+            <p>Visualização interativa das camadas BFS.</p>
+            <a class="btn btn-secondary" target="_blank" href="../parte1/out/arvore_bfs_boa_vista.html">Abrir HTML</a>
+          </article>
+          <article class="output-card">
+            <h4>Árvore BFS Boa Vista (PNG)</h4>
+            <p>Versão estática para documentos.</p>
+            <a class="btn btn-secondary" target="_blank" href="../parte1/out/arvore_bfs_boa_vista.png">Abrir PNG</a>
+          </article>
+          <article class="output-card">
+            <h4>Grafo interativo</h4>
+            <p>Busca por bairro, tooltips e destaque do percurso.</p>
+            <a class="btn btn-secondary" target="_blank" href="../parte1/out/grafo_interativo.html">Abrir HTML</a>
+          </article>
+          <article class="output-card">
+            <h4>Distribuição de graus</h4>
+            <p>Histograma mostrando como os graus se distribuem.</p>
+            <a class="btn btn-secondary" target="_blank" href="../parte1/out/distribuicao_graus.png">Abrir PNG</a>
+          </article>
+          <article class="output-card">
+            <h4>Top 10 bairros por grau</h4>
+            <p>Ranking visual dos bairros mais conectados.</p>
+            <a class="btn btn-secondary" target="_blank" href="../parte1/out/top10_grau.png">Abrir PNG</a>
+          </article>
+          <article class="output-card">
+            <h4>Densidade por microrregião</h4>
+            <p>Comparativo de densidade média das ego-redes.</p>
+            <a class="btn btn-secondary" target="_blank" href="../parte1/out/densidade_ego_microrregiao.png">Abrir PNG</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="execucao" class="glass">
+        <p class="section-title">Execução guiada</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span>01</span>
+            <p><code>cd parte1</code></p>
+          </div>
+          <div class="timeline-item">
+            <span>02</span>
+            <p><code>python3 -m src.cli --serve</code></p>
+          </div>
+          <div class="timeline-item">
+            <span>03</span>
+            <p>Acesse <code>http://localhost:8000</code> para navegar pelos HTMLs.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Parte 1 · Recife · Visualização interativa e métricas completas.
+    </footer>
+  </body>
+</html>
+

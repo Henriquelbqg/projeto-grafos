@@ -1,0 +1,513 @@
+{
+  "dataset": {
+    "nome": "voos.csv",
+    "tipo": "Grafo dirigido e ponderado",
+    "vertices": 90,
+    "arestas": 842,
+    "pares_unicos": 166,
+    "fontes_bfs_dfs": [
+      "EWR",
+      "JFK",
+      "LGA"
+    ],
+    "distribuicao_graus": {
+      "min": 1,
+      "max": 305,
+      "media": 18.71,
+      "mediana": 5
+    }
+  },
+  "bfs_dfs": {
+    "EWR": {
+      "bfs_ordem_15": [
+        "EWR",
+        "IAH",
+        "ORD",
+        "FLL",
+        "SFO",
+        "LAS",
+        "PBI",
+        "MIA",
+        "ATL",
+        "PHX",
+        "MSP",
+        "LAX",
+        "CLT",
+        "IAD",
+        "SNA"
+      ],
+      "bfs_camadas": 2,
+      "bfs_ciclos": [
+        [
+          "EWR",
+          "MIA"
+        ],
+        [
+          "EWR",
+          "ORD"
+        ],
+        [
+          "EWR",
+          "PBI"
+        ],
+        [
+          "EWR",
+          "CLT"
+        ],
+        [
+          "EWR",
+          "FLL"
+        ]
+      ],
+      "bfs_tempo_s": 0.000129,
+      "dfs_ordem_15": [
+        "EWR",
+        "IAH",
+        "ORD",
+        "FLL",
+        "SFO",
+        "LAS",
+        "PBI",
+        "MIA",
+        "ATL",
+        "PHX",
+        "MSP",
+        "LAX",
+        "CLT",
+        "IAD",
+        "SNA"
+      ],
+      "dfs_ciclos": [
+        [
+          "EWR",
+          "MIA"
+        ],
+        [
+          "EWR",
+          "ORD"
+        ],
+        [
+          "EWR",
+          "PBI"
+        ],
+        [
+          "EWR",
+          "CLT"
+        ],
+        [
+          "EWR",
+          "FLL"
+        ]
+      ],
+      "dfs_tempo_s": 0.000392
+    },
+    "JFK": {
+      "bfs_ordem_15": [
+        "JFK",
+        "MIA",
+        "BQN",
+        "MCO",
+        "PBI",
+        "TPA",
+        "LAX",
+        "BOS",
+        "ATL",
+        "SFO",
+        "RSW",
+        "SJU",
+        "PHX",
+        "BUF",
+        "LAS"
+      ],
+      "bfs_camadas": 2,
+      "bfs_ciclos": [
+        [
+          "JFK",
+          "SJU"
+        ],
+        [
+          "JFK",
+          "BOS"
+        ],
+        [
+          "JFK",
+          "SFO"
+        ],
+        [
+          "JFK",
+          "MCO"
+        ],
+        [
+          "JFK",
+          "LAX"
+        ]
+      ],
+      "bfs_tempo_s": 9.9e-05,
+      "dfs_ordem_15": [
+        "JFK",
+        "MIA",
+        "BQN",
+        "MCO",
+        "PBI",
+        "TPA",
+        "LAX",
+        "BOS",
+        "ATL",
+        "SFO",
+        "RSW",
+        "SJU",
+        "PHX",
+        "BUF",
+        "LAS"
+      ],
+      "dfs_ciclos": [
+        [
+          "JFK",
+          "SJU"
+        ],
+        [
+          "JFK",
+          "BOS"
+        ],
+        [
+          "JFK",
+          "SFO"
+        ],
+        [
+          "JFK",
+          "MCO"
+        ],
+        [
+          "JFK",
+          "LAX"
+        ]
+      ],
+      "dfs_tempo_s": 0.000324
+    },
+    "LGA": {
+      "bfs_ordem_15": [
+        "LGA",
+        "IAH",
+        "ATL",
+        "IAD",
+        "ORD",
+        "DFW",
+        "FLL",
+        "MSP",
+        "DTW",
+        "MIA",
+        "BWI",
+        "MCO",
+        "DEN",
+        "PBI",
+        "XNA"
+      ],
+      "bfs_camadas": 2,
+      "bfs_ciclos": [
+        [
+          "LGA",
+          "ATL"
+        ],
+        [
+          "LGA",
+          "IAH"
+        ],
+        [
+          "LGA",
+          "MSP"
+        ],
+        [
+          "LGA",
+          "ORD"
+        ],
+        [
+          "LGA",
+          "DFW"
+        ]
+      ],
+      "bfs_tempo_s": 7.1e-05,
+      "dfs_ordem_15": [
+        "LGA",
+        "IAH",
+        "ATL",
+        "IAD",
+        "ORD",
+        "DFW",
+        "FLL",
+        "MSP",
+        "DTW",
+        "MIA",
+        "BWI",
+        "MCO",
+        "DEN",
+        "PBI",
+        "XNA"
+      ],
+      "dfs_ciclos": [
+        [
+          "LGA",
+          "ATL"
+        ],
+        [
+          "LGA",
+          "IAH"
+        ],
+        [
+          "LGA",
+          "MSP"
+        ],
+        [
+          "LGA",
+          "ORD"
+        ],
+        [
+          "LGA",
+          "DFW"
+        ]
+      ],
+      "dfs_tempo_s": 0.000302
+    }
+  },
+  "dijkstra": [
+    {
+      "origem": "EWR",
+      "destino": "LAX",
+      "custo": 2454.0,
+      "caminho": [
+        "EWR",
+        "LAX"
+      ],
+      "tempo_s": 0.000657,
+      "memoria_kb": 19.61
+    },
+    {
+      "origem": "EWR",
+      "destino": "SFO",
+      "custo": 2565.0,
+      "caminho": [
+        "EWR",
+        "SFO"
+      ],
+      "tempo_s": 0.000497,
+      "memoria_kb": 17.64
+    },
+    {
+      "origem": "JFK",
+      "destino": "MIA",
+      "custo": 1089.0,
+      "caminho": [
+        "JFK",
+        "MIA"
+      ],
+      "tempo_s": 0.000276,
+      "memoria_kb": 17.59
+    },
+    {
+      "origem": "JFK",
+      "destino": "LAX",
+      "custo": 2475.0,
+      "caminho": [
+        "JFK",
+        "LAX"
+      ],
+      "tempo_s": 0.000358,
+      "memoria_kb": 17.59
+    },
+    {
+      "origem": "LGA",
+      "destino": "ATL",
+      "custo": 762.0,
+      "caminho": [
+        "LGA",
+        "ATL"
+      ],
+      "tempo_s": 0.000185,
+      "memoria_kb": 17.59
+    }
+  ],
+  "bellman_ford": {
+    "caso_sem_ciclo_negativo": {
+      "distancias": {
+        "A": 0.0,
+        "B": 4.0,
+        "C": 5.0,
+        "D": 4.0
+      },
+      "ciclo_negativo": false,
+      "tempo_s": 1e-05
+    },
+    "caso_com_ciclo_negativo": {
+      "distancias": {
+        "P": -2.0,
+        "Q": 0.0,
+        "R": -3.0
+      },
+      "ciclo_negativo": true,
+      "tempo_s": 7e-06
+    }
+  },
+  "metricas_desempenho": [
+    {
+      "task": "BFS_EWR",
+      "algorithm": "BFS",
+      "source": "EWR",
+      "time_s": 0.000129,
+      "memory_kb": 5.27,
+      "nodes_explored": 75,
+      "layers": 2,
+      "cycles_found": 5
+    },
+    {
+      "task": "DFS_EWR",
+      "algorithm": "DFS",
+      "source": "EWR",
+      "time_s": 0.000392,
+      "memory_kb": 24.58,
+      "nodes_explored": 75,
+      "cycles_found": 5
+    },
+    {
+      "task": "BFS_JFK",
+      "algorithm": "BFS",
+      "source": "JFK",
+      "time_s": 9.9e-05,
+      "memory_kb": 5.23,
+      "nodes_explored": 58,
+      "layers": 2,
+      "cycles_found": 5
+    },
+    {
+      "task": "DFS_JFK",
+      "algorithm": "DFS",
+      "source": "JFK",
+      "time_s": 0.000324,
+      "memory_kb": 24.42,
+      "nodes_explored": 58,
+      "cycles_found": 5
+    },
+    {
+      "task": "BFS_LGA",
+      "algorithm": "BFS",
+      "source": "LGA",
+      "time_s": 7.1e-05,
+      "memory_kb": 3.9,
+      "nodes_explored": 36,
+      "layers": 2,
+      "cycles_found": 5
+    },
+    {
+      "task": "DFS_LGA",
+      "algorithm": "DFS",
+      "source": "LGA",
+      "time_s": 0.000302,
+      "memory_kb": 20.36,
+      "nodes_explored": 36,
+      "cycles_found": 5
+    },
+    {
+      "task": "Dijkstra_EWR_LAX",
+      "algorithm": "Dijkstra",
+      "source": "EWR",
+      "target": "LAX",
+      "time_s": 0.000657,
+      "memory_kb": 19.61,
+      "distance": 2454.0,
+      "path_len": 2
+    },
+    {
+      "task": "Dijkstra_EWR_SFO",
+      "algorithm": "Dijkstra",
+      "source": "EWR",
+      "target": "SFO",
+      "time_s": 0.000497,
+      "memory_kb": 17.64,
+      "distance": 2565.0,
+      "path_len": 2
+    },
+    {
+      "task": "Dijkstra_JFK_MIA",
+      "algorithm": "Dijkstra",
+      "source": "JFK",
+      "target": "MIA",
+      "time_s": 0.000276,
+      "memory_kb": 17.59,
+      "distance": 1089.0,
+      "path_len": 2
+    },
+    {
+      "task": "Dijkstra_JFK_LAX",
+      "algorithm": "Dijkstra",
+      "source": "JFK",
+      "target": "LAX",
+      "time_s": 0.000358,
+      "memory_kb": 17.59,
+      "distance": 2475.0,
+      "path_len": 2
+    },
+    {
+      "task": "Dijkstra_LGA_ATL",
+      "algorithm": "Dijkstra",
+      "source": "LGA",
+      "target": "ATL",
+      "time_s": 0.000185,
+      "memory_kb": 17.59,
+      "distance": 762.0,
+      "path_len": 2
+    },
+    {
+      "task": "BellmanFord_sem_ciclo",
+      "algorithm": "Bellman-Ford",
+      "case": "sem_ciclo_negativo",
+      "time_s": 1e-05,
+      "memory_kb": 0,
+      "negative_cycle": false,
+      "distances": {
+        "A": 0.0,
+        "B": 4.0,
+        "C": 5.0,
+        "D": 4.0
+      }
+    },
+    {
+      "task": "BellmanFord_com_ciclo",
+      "algorithm": "Bellman-Ford",
+      "case": "com_ciclo_negativo",
+      "time_s": 7e-06,
+      "memory_kb": 0,
+      "negative_cycle": true,
+      "distances": {
+        "P": -2.0,
+        "Q": 0.0,
+        "R": -3.0
+      }
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "degree_distribution",
+      "file": "grau_distribuicao.png",
+      "description": "Distribuição de graus totais (in+out) dos aeroportos"
+    },
+    {
+      "type": "top_hubs",
+      "file": "top_hubs_grau.png",
+      "description": "Top aeroportos com maior grau total"
+    },
+    {
+      "type": "distance_histogram",
+      "file": "histograma_distancias.png",
+      "description": "Histograma das distâncias (pesos) das rotas"
+    },
+    {
+      "type": "in_out_scatter",
+      "file": "grau_in_out_scatter.png",
+      "description": "Dispersão grau de saída vs grau de entrada"
+    },
+    {
+      "type": "longest_routes",
+      "file": "top_rotas_distantes.png",
+      "description": "Top rotas mais longas em milhas"
+    }
+  ],
+  "discussion": "BFS/DFS são úteis para entender alcance e camadas a partir de aeroportos fonte (EWR, JFK, LGA). Dijkstra usa a distância como peso (sempre ≥ 0) para obter rotas mínimas entre pares de aeroportos. Bellman-Ford permite trabalhar com pesos negativos; aqui usamos grafos sintéticos para demonstrar um caso sem ciclo negativo (distâncias bem definidas) e um com ciclo negativo (flag de detecção). A modelagem usa apenas a menor distância por par origem-destino, ignorando frequência de voos, atrasos e horários, o que simplifica o grafo mas perde aspectos importantes da dinâmica real."
+}
