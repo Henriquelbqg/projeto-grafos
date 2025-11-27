@@ -316,14 +316,9 @@ Consulte `RELATORIO.md` para:
 
 O arquivo `parte1/out/notas_analiticas.md` explica o que cada visualização revela sobre o grafo dos bairros do Recife.
 
-## 🔗 Links Úteis
-
-- **Repositório GitHub**: https://github.com/Ebn0511/Projetos_Grafos
-- **Documentação**: `RELATORIO.md`
-
 ## 👥 Autores
 
-- Enzo Nunes
-- Lucas Souto
-- Gabriel Antônio
-- Henrique Lobo
+- Enzo Nunes: ebn@cesar.school
+- Lucas Souto: lsmc2@cesar.school
+- Gabriel Antônio: gaor@cesar.school
+- Henrique Lobo: hlqg@cesar.school
