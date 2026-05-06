@@ -11,7 +11,7 @@ Projeto da cadeira de Teoria dos Grafos implementando algoritmos de grafos (BFS,
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/Ebn0511/Projetos_Grafos.git
+git clone https://github.com/Henriquelbqg/Projetos_Grafos.git
 cd Projetos_Grafos
 ```
 
